@@ -1,0 +1,80 @@
+# ============================================================
+# Face Animation Comparison — .gitignore
+# ============================================================
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.so
+
+# ----- Virtual environments -----
+venv/
+.venv/
+env/
+
+# ----- Model weights & checkpoints (too large for GitHub) -----
+# These must be downloaded separately — see README.md
+*.pth
+*.pth.tar
+*.safetensors
+*.onnx
+*.ckpt
+*.bin
+*.pt
+*.pkl
+*.h5
+*.tflite
+*.pb
+
+# SadTalker weights
+SadTalker/checkpoints/
+SadTalker/gfpgan/weights/
+
+# Hallo pretrained models
+hallo/pretrained_models/
+
+# EchoMimic pretrained weights
+echomimic/pretrained_weights/
+
+# ----- Caches & temp files -----
+.cache/
+*.cache
+.claude/
+hallo/.cache/
+*.tmp
+*.temp
+
+# ----- Sub-repo git directories (we have one top-level repo) -----
+SadTalker/.git/
+hallo/.git/
+echomimic/.git/
+
+# ----- IDE & OS -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- Logs -----
+*.log
+*.out
+
+# ----- Intermediate results (keep only final output videos) -----
+results/sadtalker/
+results/echomimic/
+results/hallo/
+echomimic/output/
+
+# ----- Misc large/generated files -----
+*.mp3
+*.wav
+!news_audio_short.wav
+!news_audio.wav
