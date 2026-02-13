@@ -1,6 +1,5 @@
 from skimage.transform import estimate_transform, AffineTransform
 import numpy as np
-from IPython import embed
 import mediapipe as mp
 import copy
 
